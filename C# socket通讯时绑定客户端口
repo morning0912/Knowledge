@@ -1,0 +1,4 @@
+netstat -aon|findstr 8502 //查看通讯连接的情况
+socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+socket.Bind(new IPEndPoint(IPAddress.Any, localport));
+socket.Connect(remoteEP);
