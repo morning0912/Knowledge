@@ -1,8 +1,0 @@
-netstat -aon|findstr 8502 //查看通讯连接的情况
-socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-socket.Bind(new IPEndPoint(IPAddress.Any, localport));
-socket.Connect(remoteEP);
-
-断开连接时
-若需要立即重连,则只需调用 socket.Dispose()/socket.CLose()
-安全的应该时先调用 socket.ShutDown(SocketShutdown.Both) 再调用socket.Dispose()/socket.CLose().但socket.ShutDown会导致,连接短时间内断不开
